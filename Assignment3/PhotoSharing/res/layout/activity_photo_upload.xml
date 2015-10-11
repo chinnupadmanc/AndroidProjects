@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true" >
+
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@+id/select_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:contentDescription="@string/desc"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher" />
+
+    <Button
+        android:id="@+id/select_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="selectPhoto"
+        android:text="@string/btnSelectPhoto" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:visibility="gone"
+        android:onClick="uploadPhoto"
+        android:text="@string/btnUpload" />
+    
+	    <LinearLayout
+	        android:id="@+id/progressbar_view"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|center_horizontal"
+	        android:layout_below="@+id/imageView1"
+	        android:orientation="horizontal" 
+	        android:visibility="gone"
+	        android:layout_marginTop="20dp">
+	
+	        <ProgressBar
+	            style="?android:attr/progressBarStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical|center_horizontal" />
+	    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <TextView
+        android:id="@+id/network_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+      	android:visibility="gone"
+      	android:layout_centerVertical="true"
+      	android:layout_centerHorizontal="true"
+      	android:background="@drawable/background"
+      	android:text="@string/network_status"
+      	android:textColor="#ffffff" />
+
+</RelativeLayout>
+</ScrollView>

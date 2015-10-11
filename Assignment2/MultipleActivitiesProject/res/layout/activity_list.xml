@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center|top"
+    android:onClick="backToMain"
+    android:orientation="vertical" >
+
+    <fragment
+        android:id="@+id/list_fragment"
+        android:name="edu.sdsu.cs.chinnu.multipleactivitiesproject.VersionListFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="406dp"
+        tools:layout="@layout/versionlist_fragment" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backToMain"
+        android:text="@string/backButtonLabel" />
+
+</LinearLayout>

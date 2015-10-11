@@ -1,0 +1,66 @@
+Step 1: Basic Layout - Tab Layout with Swipe Views
+
+http://developer.android.com/training/implementing-navigation/lateral.html
+http://www.androidhive.info/2013/10/android-tab-layout-with-swipeable-views-1/
+
+1. Create project.
+2. As I am using Fragments, extend main activity from FragmentActivity.
+3. To set up your layout with ViewPager, add a <ViewPager> element to your XML layout(acitivity_main.xml.
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.view.ViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+    To insert child views that represent each page, you need to hook this layout to a PagerAdapter.
+4. Create a class called MyPagerAdapter.java which extends FragmentPagerAdapter.
+FragmentPagerAdapter - Implementation of PagerAdapter that represents each page as a Fragment 
+that is persistently kept in the fragment manager as long as the user can return to the page. 
+This adapter provides fragment views to tabs which I am going to create them later.
+5. Set adpater to viewPager in MainActivity.java..
+		myPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager.setAdapter(myPagerAdapter);
+6. Specify that tabs should be displayed in the action bar.
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);        
+7. Create AudioFragment.java and VideoFragment.java and respective layout xmls.
+8. Add tabs to ActionBar.
+final ActionBar actionBar = getActionBar();
+actionBar.addTab(actionBar.newTab().setText("Audio").setTabListener(tabListener));
+actionBar.addTab(actionBar.newTab().setText("Video").setTabListener(tabListener));
+9. Create a tab listener that is called when the user changes tabs.
+ActionBar.TabListener tabListener = new ActionBar.TabListener() {
+        public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+            // show the given tab
+            // When the tab is selected, switch to the corresponding page in the ViewPager.
+            mViewPager.setCurrentItem(tab.getPosition());
+        }
+        public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            // hide the given tab
+        }
+        public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            // probably ignore this event
+        }
+    }; 
+10. Select respective tab when the user swipes between pages with a touch gesture. 
+Set up this behavior by implementing the ViewPager.OnPageChangeListener interface 
+to change the current tab each time the page changes.
+
+  viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        	 
+            @Override
+            // This method will be invoked when a new page becomes selected.
+            public void onPageSelected(int position) {
+                // on changing the page
+                // When swiping between pages, select the corresponding tab.
+                actionBar.setSelectedNavigationItem(position);
+            }
+ 
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+            }
+ 
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+            }
+        });

@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_item_keyboard_activity"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/keyboard_activity"/>
+    
+    <item
+        android:id="@+id/menu_item_web_activity"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/web_activity"/>
+    
+    <item
+        android:id="@+id/menu_item_list_activity"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="@string/list_activity"/>
+
+</menu>

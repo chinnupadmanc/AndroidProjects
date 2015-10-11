@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+<stroke android:width="3dp"
+        android:color="#80FFFFFF" />
+
+  <corners android:radius="25dp" />
+
+  <gradient android:angle="270"
+            android:centerColor="#70C656"
+            android:endColor="#90150517"
+            android:startColor="#90150517" />
+</shape>
+
+<!-- http://stackoverflow.com/questions/18070008/android-button-background-color  -->

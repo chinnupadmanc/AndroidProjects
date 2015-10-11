@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background"
+    android:adjustViewBounds="true"
+    android:scaleType = "centerCrop"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/flappyBird1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:contentDescription="@string/desc"
+        android:background="@anim/bird_motion" />
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="start"
+        android:text="@string/startBtn" 
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@drawable/button" />
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="restart"
+        android:minWidth="100dp"
+        android:text="@string/restartBtn" 
+        android:layout_marginTop="10dp"
+        android:visibility="gone" 
+        android:background="@drawable/button" />
+
+    <edu.sdsu.cs.chinnu.flappybird.Drawing
+        android:id="@+id/drawing1"
+        android:layout_width="40dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+
+    <edu.sdsu.cs.chinnu.flappybird.Drawing
+        android:id="@+id/drawing2"
+        android:layout_width="40dp"
+        android:layout_height="260dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/tapToStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/drawing2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:textSize="20sp"
+        android:text="@string/tap" 
+        android:visibility="gone" />
+
+</RelativeLayout>

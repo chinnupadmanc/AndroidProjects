@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Life Cycle Methods</string>
+    <string name="action_settings">Settings</string>
+    <string name="create">onCreate</string>
+    <string name="restart">onRestart</string>
+    <string name="start">onStart</string>
+    <string name="resume">onResume</string>
+    <string name="pause">onPause</string>
+    <string name="createInitialCount">0</string>
+    <string name="restartInitialCount">0</string>
+    <string name="startInitialCount">0</string>
+    <string name="resumeInitialCount">0</string>
+    <string name="pauseInitialCount">0</string>
+    <string name="resetButtonLabel">Reset</string>
+    <string name="col1Header">Method</string>
+    <string name="col2Header">Times Called</string>
+
+</resources>

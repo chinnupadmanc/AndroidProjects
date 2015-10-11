@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlappyBird</string>
+    <string name="action_settings">Settings</string>
+     <string name="desc">Flappy Bird</string>
+    <string name="startBtn">Start</string>
+    <string name="tap">Tap to Begin</string>
+    <string name="restartBtn">Play Again</string>
+
+</resources>

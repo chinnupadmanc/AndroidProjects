@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPhotoActivity" >
+   
+    <!-- http://stackoverflow.com/questions/12559461/how-to-show-progress-barcircle-in-an-activity-having-a-listview-before-loading -->
+    <LinearLayout
+    android:id="@+id/progressbar_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical" >
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="center_vertical|center_horizontal"
+	        android:orientation="horizontal" >
+	
+	        <ProgressBar
+	            style="?android:attr/progressBarStyle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical|center_horizontal" />
+	    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical|center_horizontal" 
+        android:background="#C0C0C0" />
+	</LinearLayout>
+
+
+    <ImageView
+	android:id="@+id/imageView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:src="@drawable/ic_launcher" 
+	android:contentDescription="@string/desc" />
+    
+      <TextView
+        android:id="@+id/network_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:visibility="gone"
+      	android:background="@drawable/background"
+      	android:text="@string/show_photo_network_status"
+      	android:layout_centerVertical="true"
+      	android:layout_centerHorizontal="true"
+      	android:textColor="#ffffff" />
+    
+
+</RelativeLayout>

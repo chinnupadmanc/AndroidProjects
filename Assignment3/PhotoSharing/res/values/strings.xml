@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Photo Sharing</string>
+    <string name="action_settings">Settings</string>
+    <string name="network_status">You are offline!</string>
+    <string name="show_photo_network_status">No offline photo available!</string>
+    <string name="btnUploadPhoto">Upload Photo</string>
+    <string name="btnSelectPhoto">Select Photo</string>
+    <string name="btnUpload">Upload</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="desc">Display Photo</string>
+    <string name="title_activity_user_list">Users</string>
+    <string name="title_activity_photo_list">Photos</string>
+    <string name="title_activity_show_photo">Display Photo</string>
+    <string name="title_activity_photo_upload">Upload Photo</string>
+
+</resources>
